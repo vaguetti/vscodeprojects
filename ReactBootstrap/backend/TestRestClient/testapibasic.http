@@ -1,1 +1,16 @@
-GET http://localhost:4000/ HTTP/1.1
+GET http://localhost:4000 HTTP/1.1
+
+GET http://localhost:4000/alunos?idade=30 HTTP/1.1
+
+DELETE http://localhost:4000/alunos/3 HTTP/1.1
+
+PUT http://localhost:4000/alunos/pedro HTTP/1.1
+
+POST /alunos HTTP/1.1
+Host: localhost:4000
+Content-Type: application/json
+
+{
+    "nome" : "Pedro",
+    "idade" : "30"
+}
