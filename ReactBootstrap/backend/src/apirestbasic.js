@@ -1,35 +1,33 @@
 const express = require('express');
-// GET, PUT, DELETE, POST
+const mongoose = require('mongoose');
+const alunoController = require('./controllers/AlunoController');
 
 const app = express();
 
-app.get('/', function(req, res) {
-
-     res.json({ nome : "João", idade: 30 , telefone : "(61) 99999-9999"});
-  
+mongoose.connect('mongodb+srv://pwa:pwa123@testesmongodb-4irx5.mongodb.net/testpwa?retryWrites=true&w=majority', {
+     useNewUrlParser: true,
+     useUnifiedTopology: true  
 });
-// query params http://localhost:4000/alunos?idade=20&nome=Pedro
-app.get('/alunos', function(req, res) {
 
-     res.json({ idade : req.query.idade});
-  
-});
-// route params http://localhost:4000/alunos/3
-app.delete('/alunos/:id', function(req, res) {
+app.get('/', alunoController.show);
 
-     res.json({ id : req.params.id});
-  
-});
-app.put('/alunos/:nome', function(req, res) {
+//req.query =  query params
+app.get('/alunos', alunoController.index);
 
-     res.json({ nome : req.params.nome});
-  
-});
-// body params http://localhost:4000/alunos
-app.use(express.json())
-app.post('/alunos', function(req, res) {
+//req.params  = route params (post, put, delete)
+app.delete('/alunos/:id', alunoController.destroy);
+
+
+
+// req.body = body params (JSON) (post e put )
+app.use(express.json()); //necessário para compreensão de um corpo no formato JSON
+
+app.put('/alunos/:id', alunoController.update);
+
+app.post('/alunos', alunoController.store );
+/*app.post('/alunos', function(req, res) {
 
      res.json(req.body);
+});*/
 
-});
 app.listen(4000);
