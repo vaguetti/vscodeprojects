@@ -9,11 +9,11 @@ mongoose.connect('mongodb+srv://pwa:pwa123@testesmongodb-4irx5.mongodb.net/testp
      useNewUrlParser: true,
      useUnifiedTopology: true  
 });
-
+/*
 app.use(express.static(path.join(__dirname,'..','..','frontend','build')));
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '..','..','frontend','build', 'index.html'));
-});
+});*/
  app.get('/alunos', alunoController.show);
 //req.query =  query params
 app.get('/alunos/filtro', alunoController.index);
