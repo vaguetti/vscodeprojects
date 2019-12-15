@@ -1,13 +1,18 @@
 {
+    "name": "pwasample",
+    "version": "0.0.1",
+    "description": "Estudo de caso sobre PWA",
+    "author": "Prof. Vaguetti <leandro.vaguetti@ifb.edu.br>",
+    "main": "apirestbasic.js",
     "scripts": {
         "start": "node backend/src/apirestbasic.js",
         "dev" : "nodemon backend/src/apirestbasic.js"
     },
     "dependencies": {
-        "Cors": "^2.8.5",
-        "Express": "^4.17.1",
-        "Mongoose": "^5.8.1",
-        "Path": "^0.12.7"
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongoose": "^5.8.1",
+        "path": "^0.12.7"
     },
     "devDependencies": {
         "nodemon": "^2.0.1"
