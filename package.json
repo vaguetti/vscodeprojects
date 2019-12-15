@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "start": "node backend/src/apirestbasic.js",
+        "dev" : "nodemon backend/src/apirestbasic.js"
+    },
+    "dependencies": {
+        "Cors": "^2.8.5",
+        "Express": "^4.17.1",
+        "Mongoose": "^5.8.1",
+        "Path": "^0.12.7"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.1"
+    }
+}
