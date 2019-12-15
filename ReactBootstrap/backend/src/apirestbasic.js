@@ -1,18 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const alunoController = require('./controllers/AlunoController');
-
+const cors = require('cors');
+const path = require('path');
 const app = express();
-
+app.use(cors());
 mongoose.connect('mongodb+srv://pwa:pwa123@testesmongodb-4irx5.mongodb.net/testpwa?retryWrites=true&w=majority', {
      useNewUrlParser: true,
      useUnifiedTopology: true  
 });
 
-app.get('/', alunoController.show);
-
+app.use(express.static(path.join(__dirname,'..','..','frontend','build')));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '..','..','frontend','build', 'index.html'));
+});
+ app.get('/alunos', alunoController.show);
 //req.query =  query params
-app.get('/alunos', alunoController.index);
+app.get('/alunos/filtro', alunoController.index);
 
 //req.params  = route params (post, put, delete)
 app.delete('/alunos/:id', alunoController.destroy);
@@ -30,4 +34,4 @@ app.post('/alunos', alunoController.store );
      res.json(req.body);
 });*/
 
-app.listen(4000);
+app.listen(3000);
