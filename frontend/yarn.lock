@@ -8209,14 +8209,14 @@ react-overlays@^2.1.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-qr-reader2@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-qr-reader2/-/react-qr-reader2-1.1.0.tgz#1c25a644b9d46f40582c26d1b45e036f003630ec"
-  integrity sha512-FCgkWEmPpISge5HOUD2pQI7N1+O4yCRKtJlm9mLpT8tbUUKOJQhNLUNaH6PY00pREwL+VwASsav+Ca5bu3W6gw==
+react-qr-reader@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-qr-reader/-/react-qr-reader-2.2.1.tgz#dc89046d1c1a1da837a683dd970de5926817d55b"
+  integrity sha512-EL5JEj53u2yAOgtpAKAVBzD/SiKWn0Bl7AZy6ZrSf1lub7xHwtaXe6XSx36Wbhl1VMGmvmrwYMRwO1aSCT2fwA==
   dependencies:
     jsqr "^1.2.0"
     prop-types "^15.7.2"
-    webrtc-adapter "^7.2.9"
+    webrtc-adapter "^7.2.1"
 
 react-router-bootstrap@^0.25.0:
   version "0.25.0"
@@ -10111,7 +10111,7 @@ webpack@4.41.0:
     watchpack "^1.6.0"
     webpack-sources "^1.4.1"
 
-webrtc-adapter@^7.2.9:
+webrtc-adapter@^7.2.1:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-7.3.0.tgz#a65e18aad42759bab6ced7f8cfff11b051321e2a"
   integrity sha512-pKcwt6IR6RLCD6jlcdOOi88iVwdzppHlkOhtgTSuZHtYTxdD09t5fA1Di7GJU7je8oHcCBlNfb7zwBsetERnmQ==

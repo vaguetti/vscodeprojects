@@ -1,5 +1,5 @@
 import React from 'react';
-import QrReader from 'react-qr-reader2';
+import QrReader from 'react-qr-reader';
 
 
 function QRCode(){
@@ -20,17 +20,17 @@ function QRCode(){
         }
 
     return(
-      <>
+      
       <div>
       <QrReader
           delay={300}
-          onError={this.handleError}
-          onScan={this.handleScan}
+          onError={handleError}
+          onScan={handleScan}
           style={{ width: '100%' }}
         />
         <p>{state.result}</p>
       </div>
-      </>
+    
     );
 }
 export default QRCode;
