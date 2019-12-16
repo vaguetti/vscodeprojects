@@ -29,23 +29,23 @@ function Relatorio() {
 
 */  return (
     <>
-  <Table striped bordered hover size="sm">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>E-mail</th>
-    </tr>
-  </thead>
-  <tbody>
-   {alunos.map(aluno => (
-    <tr>
-      
-      <td>{aluno.nome}</td>
-      <td>{aluno.email}</td>
-    </tr>
-    ))}
-   
-  </tbody>
+    <Table striped bordered hover size="sm">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+        {alunos.map(aluno => (
+          <tr key={aluno._id}>
+            
+            <td>{aluno.nome}</td>
+            <td>{aluno.email}</td>
+          </tr>
+          ))}
+        
+        </tbody>
 </Table>
    </>
   );

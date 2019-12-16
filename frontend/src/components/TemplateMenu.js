@@ -1,28 +1,29 @@
 import React from 'react';
-//import logo from './logo.svg';
-//import './App.css';
 import Menu from '../components/Menu';
-import Logo from '../components/Logo';
+//import {Link} from 'react-router-dom'; 
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 //import Formulario from './components/Formulario';
 //import Relatorio from './components/Relatorio';
-
+//import Logo from './Logo';
 import 'bootstrap/dist/css/bootstrap.min.css';
-function App() {
-  return (
+
+function TemplateMenu(props) {
+
+   // console.log(props.component);
+    return (
     <>
       <Container>
        <Row>
          <Col>
-          <Menu />
+          <Menu/>
          </Col>
        </Row> 
        <Row>
          <Col>
-         <Logo />
+         {props.component()}
          </Col>
        </Row>
       </Container> 
@@ -30,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default TemplateMenu;

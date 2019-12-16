@@ -29,7 +29,7 @@ function Formulario() {
       email: email
     });
    //console.log(response.status);
-   if(response.status == 200)
+   if(response.status === 200)
        alert('Aluno Cadastrado com Sucesso');
   }
   
