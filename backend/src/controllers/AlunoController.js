@@ -35,6 +35,14 @@ module.exports = {
                aluno = { message : "Nenhum aluno Encontrado"};
            return res.json(aluno);
        },
+       async indexId(req,res)
+       { 
+           const aluno_id = req.params.id;
+           let aluno = await Aluno.findById({ _id : aluno_id});
+           if(!aluno)
+               aluno = { message : "Nenhum aluno Encontrado"};
+           return res.json(aluno);
+       },
        async destroy(req, res)
        { 
            //const id = req.params.id;

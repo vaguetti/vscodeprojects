@@ -18,6 +18,8 @@ app.get('/', function(req, res) {
 //req.query =  query params
 app.get('/alunos/filtro', alunoController.index);
 
+app.get('/alunos/:id', alunoController.indexId);
+
 //req.params  = route params (post, put, delete)
 app.delete('/alunos/:id', alunoController.destroy);
 

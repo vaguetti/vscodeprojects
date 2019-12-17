@@ -4,6 +4,7 @@ GET http://localhost:3000/alunos HTTP/1.1
 #########
 GET http://localhost:3000/alunos/filtro?email=hiallyrabelo@gmail.com HTTP/1.1
 ######### HTTP/1.1
+GET http://localhost:3000/alunos/5df6bea7681c5b0013d0e2a8 HTTP/1.1
 #########
 DELETE http://localhost:3000/alunos/5de6de620b6ffd144c7c09bb HTTP/1.1
 ##########################

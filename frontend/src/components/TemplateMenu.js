@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function TemplateMenu(props) {
 
-   // console.log(props.component);
+   
     return (
     <>
       <Container>
@@ -23,7 +23,7 @@ function TemplateMenu(props) {
        </Row> 
        <Row>
          <Col>
-         {props.component()}
+         {props.component(props)}
          </Col>
        </Row>
       </Container> 

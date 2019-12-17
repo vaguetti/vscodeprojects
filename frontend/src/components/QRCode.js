@@ -5,15 +5,20 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import TemplateMenu from './TemplateMenu';
 
-function QRCode(){
+ function QRCode(props){
 
+        const history = props.history; 
+        //console.log(history);
+        
         const [qrcode,setQrcode] = useState('');
-       
+        
         let handleScan = data => {
           console.log(data);
           if (data) {
             setQrcode(data);
+            
           }
         }
         let handleError = err => {
@@ -21,8 +26,12 @@ function QRCode(){
         }
 
       function enviaSubmit(event){
-                event.preventDefault(); 
-                alert(qrcode);
+                event.preventDefault();
+                localStorage.setItem('aluno_id', qrcode); 
+                //alert(qrcode);
+                //TemplateMenu.props(BuscaQRCode);
+                history.push('/buscaqrcode');
+                history.go();
         }
     return(
       
@@ -39,8 +48,7 @@ function QRCode(){
           <Form.Control
            type="text" 
            value = {qrcode}
-           disable = "true"
-           />
+          />
         </Form.Group>
           <Button variant="primary" type="submit">
             Buscar
