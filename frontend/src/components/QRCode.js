@@ -1,22 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import QrReader from 'react-qr-reader';
 
 
 function QRCode(){
 
-        let state = {
-          result: 'No result'
-        }
+        const [qrcode,setQrcode] = useState('');
        
         let handleScan = data => {
+          console.log(data);
           if (data) {
-            this.setState({
-              result: data
-            })
+            setQrcode(data);
           }
         }
         let handleError = err => {
-          console.error(err)
+          console.error(err);
         }
 
     return(
@@ -28,7 +25,7 @@ function QRCode(){
           onScan={handleScan}
           style={{ width: '100%' }}
         />
-        <p>{state.result}</p>
+        <p>{qrcode}</p>
       </div>
     
     );
