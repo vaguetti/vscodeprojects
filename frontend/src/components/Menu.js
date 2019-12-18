@@ -32,6 +32,9 @@ function Menu() {
         <LinkContainer to="/qrcode">
           <Nav.Link >QR Code</Nav.Link>
         </LinkContainer>
+        <LinkContainer to="/photo">
+          <Nav.Link >Photo</Nav.Link>
+        </LinkContainer>
       </Nav>
       </Navbar.Collapse>
     </Navbar>

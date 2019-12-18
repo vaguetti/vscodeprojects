@@ -13,6 +13,7 @@ import Formulario from './components/Formulario';
 import Relatorio from './components/Relatorio';
 import QRCode from './components/QRCode';
 import BuscaQRCode from './components/BuscaQRCode';
+import Photo from './components/Photo';
 
 import { createBrowserHistory } from "history";
 
@@ -26,6 +27,8 @@ ReactDOM.render(
         <Route path="/listar" key="3"><TemplateMenu component={Relatorio}/></Route>
         <Route path="/qrcode" key="4"><TemplateMenu history={history} component={QRCode}/></Route>
         <Route path="/buscaqrcode" key="5"><TemplateMenu component={BuscaQRCode}/></Route>
+        <Route path="/photo" key="6"><TemplateMenu component={Photo}/></Route>
+
     </Switch>
     </Router>
 , document.getElementById('root'));
